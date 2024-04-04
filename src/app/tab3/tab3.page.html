@@ -1,20 +1,11 @@
-<ion-content [fullscreen]="true">
-  <ion-card>
-    <ion-card-content>
-      <ion-button color="primary">SP</ion-button>
-      <ion-button color="dark">SG</ion-button>
-      <ion-button color="warning">SE</ion-button>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-content>
-      <ion-list>
-        <ion-list-header> Últimas Senhas Atendidas:</ion-list-header>
-        <ion-item *ngFor="let senha of senhasService.senhas">
-          <ion-icon [name]="senha.icon" [color]="senha.color"></ion-icon>
-          <ion-label>{{ senha.numero }}</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
-</ion-content>
+<ion-card>
+  <ion-card-content>
+    <ion-list>
+      <ion-label>Relatório</ion-label>
+      <ion-item>Senhas emitidas: {{senhasService.senhasTotal}}</ion-item>
+      <ion-item>Senhas Prioridades: {{senhasService.senhasPrior}}</ion-item>
+      <ion-item>Senhas Geral: {{senhasService.senhasGeral}}</ion-item>
+      <ion-item>Senhas Exames: {{senhasService.senhasExame}}</ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>

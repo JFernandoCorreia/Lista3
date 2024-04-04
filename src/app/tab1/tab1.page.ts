@@ -8,6 +8,8 @@ import { SenhasService } from '../services/senhas.service';
 })
 export class Tab1Page {
 
+  inputNovaSenha: string = '';
+  
   constructor(public senhasService: SenhasService) {}
 
 }

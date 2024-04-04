@@ -1,9 +1,12 @@
 <ion-content [fullscreen]="true">
   <ion-card>
     <ion-card-content>
-      <ion-button color="primary">SP</ion-button>
-      <ion-button color="dark">SG</ion-button>
-      <ion-button color="warning">SE</ion-button>
+      <ion-card-header>
+        <ion-input readonly="true" label="Senha:" value="{{inputNovaSenha}}"></ion-input>
+      </ion-card-header>
+      <ion-button (click)="senhasService.somaPrior" color="primary">SP</ion-button>
+      <ion-button (click)="senhasService.somaGeral" color="dark">SG</ion-button>
+      <ion-button (click)="senhasService.somaExame" color="warning">SE</ion-button>
     </ion-card-content>
   </ion-card>
   <ion-card>
