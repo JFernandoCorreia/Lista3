@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SenhasService } from './SenhasService';
+import { PasswordService } from '../password.service';
 
-describe('SenhasService', () => {
-  let service: SenhasService;
+describe('PasswordService', () => {
+  let service: PasswordService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SenhasService);
+    service = TestBed.inject(PasswordService);
   });
 
   it('should be created', () => {

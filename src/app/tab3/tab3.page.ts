@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SenhasService } from '../services/senhas.service';
+import { SenhasService } from '../services/SenhasService';
 
 @Component({
   selector: 'app-tab3',

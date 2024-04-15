@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SenhasService } from '../services/senhas.service';
+import { PasswordService } from '../services/password.service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,33 +8,10 @@ import { SenhasService } from '../services/senhas.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  // inputNovaSenha: string = '';
+  senha: any[];
 
-  inputNovaSenha: string = '';
-
-  constructor(public senhasService: SenhasService) {}
-
-  novaSenha(tipo: string) {
-    const novaSenha = this.gerarNovaSenha(tipo);
-    this.senhasService.adicionarSenha({
-      icon: this.definirIcone(tipo),
-      color: this.definirCor(tipo),
-      numero: novaSenha
-    });
+  constructor (public senhasService: SenhasService, public passwordService: PasswordService) {
+    this.senha = this.passwordService.senhas;
   }
-
-  gerarNovaSenha(tipo: string): string {
-    // Implemente a lógica para gerar a nova senha aqui
-    return '';
-  }
-
-  definirIcone(tipo: string): string {
-    // Implemente a lógica para definir o ícone com base no tipo aqui
-    return '';
-  }
-
-  definirCor(tipo: string): string {
-    // Implemente a lógica para definir a cor com base no tipo aqui
-    return '';
-  }
-
 }
